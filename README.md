@@ -3,7 +3,7 @@ add rate limiting to ccxt.
 ## Install
 
 ```bash
-pip install "git+https://github.com/richmanbtc/ccxt_rate_limiter.git"
+pip install "git+https://github.com/richmanbtc/ccxt_rate_limiter.git@v0.0.1#egg=ccxt_rate_limiter"
 ```
 
 ## Features
