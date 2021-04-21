@@ -44,6 +44,25 @@ bybit = ccxt.bybit({
 wrap_object(bybit, rate_limiter_group=rate_limiter_group, wrap_defs=bybit_wrap_defs())
 ```
 
+### Call api
+
+```python
+bybit.publicGetTickers()
+
+# rate limiter status
+print(rate_limiter_group.status_info())
+```
+
+## How to customize rate limiting
+
+Custom rate limiting settings can be used.
+
+see
+
+- ccxt_rate_limiter/binance.py
+- ccxt_rate_limiter/bybit.py
+- ccxt_rate_limiter/ftx.py
+
 ## Supported exchanges
 
 - binance
