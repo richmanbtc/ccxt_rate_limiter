@@ -1,5 +1,6 @@
 # not accurate
 def binance_wrap_defs():
+    # https://github.com/ccxt/ccxt/blob/master/python/ccxt/binance.py#L141
     return [
         {
             'regex': 'Get|Post|Delete',
@@ -24,11 +25,11 @@ def binance_limits():
         {
             'tag': 'send_order',
             'period_sec': 10,
-            'count': 100
+            'count': 50
         },
         {
             'tag': 'send_order',
             'period_sec': 24 * 60 * 60,
-            'count': 200000
+            'count': 160000
         },
     ]

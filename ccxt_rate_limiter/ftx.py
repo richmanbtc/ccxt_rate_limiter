@@ -1,3 +1,4 @@
+# https://github.com/ccxt/ccxt/blob/master/python/ccxt/ftx.py#L106
 def ftx_wrap_defs():
     return [
         {
@@ -13,6 +14,7 @@ def ftx_wrap_defs():
     ]
 
 # https://docs.ftx.com/#rest-api
+# https://help.ftx.com/hc/en-us/articles/360052595091-Ratelimits-on-FTX
 def ftx_limits():
     return [
         {

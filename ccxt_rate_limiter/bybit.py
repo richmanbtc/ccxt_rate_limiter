@@ -1,5 +1,7 @@
 # not accurate
 def bybit_wrap_defs():
+    # https://github.com/ccxt/ccxt/blob/master/python/ccxt/bybit.py#L113
+
     return [
         {
             'regex': 'Get',
