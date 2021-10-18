@@ -8,7 +8,7 @@ def okex_wrap_defs():
             'count': 1,
         },
         {
-            'regex': 'Get.*Position',
+            'regex': 'Get.*(Position|Balance)',
             'tags': ['get_position'],
             'count': 1,
         },
@@ -20,6 +20,11 @@ def okex_wrap_defs():
         {
             'regex': 'Get.*Fill',
             'tags': ['get_fill'],
+            'count': 1,
+        },
+        {
+            'regex': 'Get.*Config',
+            'tags': ['get_config'],
             'count': 1,
         },
     ]
@@ -47,5 +52,10 @@ def okex_limits():
             'tag': 'get_fill',
             'period_sec': 2,
             'count': 10
+        },
+        {
+            'tag': 'get_config',
+            'period_sec': 2,
+            'count': 5
         },
     ]
