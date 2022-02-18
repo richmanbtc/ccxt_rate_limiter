@@ -26,6 +26,9 @@ def scale_limits(limits=None, scale=None):
     limits = copy.deepcopy(limits)
     for limit in limits:
         limit['count'] *= scale
+        if limit['count'] < 1:
+            limit['period_sec'] /= limit['count']
+            limit['count'] = 1
     return limits
 
 def _extract_matched_defs(method=None, wrap_defs=None):

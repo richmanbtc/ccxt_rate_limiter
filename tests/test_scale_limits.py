@@ -46,3 +46,21 @@ class TestScaleLimits(TestCase):
                 'count': 10,
             },
         ])
+
+    def test_too_small_count(self):
+        input = [
+            {
+                'tag': 'tag1',
+                'period_sec': 1,
+                'count': 2,
+            },
+        ]
+        result = scale_limits(input, 0.1)
+
+        self.assertEqual(result, [
+            {
+                'tag': 'tag1',
+                'period_sec': 5,
+                'count': 1,
+            },
+        ])
